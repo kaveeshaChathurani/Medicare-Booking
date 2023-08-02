@@ -22,8 +22,16 @@ const FaqItem = ({item}) => {
                 {isOpen ? <AiOutlineMinus/> : <AiOutlinePlus />}
             </div>
         </div>
-    </div>
-  )
-}
 
-export default FaqItem
+        {isOpen && (
+            <div className='mt-4'>
+                <p className='tect-[14px] leading-6 lg:leading-7 lg:text-[16px] font-[400] text-textColor'>
+                    {item.content}
+                </p>
+            </div>
+        )}
+    </div>
+  );
+};
+
+export default FaqItem;
